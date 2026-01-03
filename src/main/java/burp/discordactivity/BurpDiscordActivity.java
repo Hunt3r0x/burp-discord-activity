@@ -101,7 +101,7 @@ public class BurpDiscordActivity implements BurpExtension, HttpHandler {
             // Check if target is in scope
             boolean inScope = api.scope().isInScope(request.url());
             if (inScope) {
-                lastHost = host + "🎯";
+                lastHost = host;
             }
             
             // Smart throttling based on traffic volume
