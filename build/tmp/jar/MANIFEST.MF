@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: Burp Discord Activity
+Implementation-Version: 1.0.0
+Burp-Extension: burp.discordactivity.BurpDiscordActivity
+
