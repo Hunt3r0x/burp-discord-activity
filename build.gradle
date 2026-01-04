@@ -22,11 +22,9 @@ configurations {
 
 dependencies {
     // Montoya API - provided by Burp Suite at runtime, but needed for compilation
-    // Maven Central doesn't have it, so we need to download manually
-    // Download from: https://github.com/PortSwigger/burp-extensions-montoya-api/releases
-    // Look for version 2025.11 or latest
-    // Place in libs/montoya-api-2025.11.jar
-    compileOnly files('libs/montoya-api-2025.12.jar')
+    // Using JitPack to reference PortSwigger's Montoya API repository
+    // If JitPack doesn't work, fallback to local file: compileOnly files('libs/montoya-api-2025.12.jar')
+    compileOnly 'com.github.PortSwigger:burp-extensions-montoya-api:2025.12'
     
     // Discord RPC library - REQUIRED: must be downloaded manually
     // Download from: https://github.com/MinnDevelopment/java-discord-rpc/releases
