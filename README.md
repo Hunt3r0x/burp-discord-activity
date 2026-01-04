@@ -1,7 +1,7 @@
 # Burp Discord Activity
 
 Show off your Burp Suite work on Discord! This extension updates your Discord status to show what tools you're using and what target you're testing.
-
+![Screenshot 2026-01-04 004221.png](https://files.catbox.moe/hbpntc.png)
 **Vibe coded by [@imXhandle](https://twitter.com/imXhandle) | [notrubberduck.space](https://notrubberduck.space)**
 
 ## What the Extension Does
