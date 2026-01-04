@@ -47,7 +47,13 @@ public class DiscordRPCManager {
             connected.set(true);
             
             // Keep connection alive
-            scheduler.scheduleAtFixedRate(rpc::Discord_RunCallbacks, 0, 2, TimeUnit.SECONDS);
+            scheduler.scheduleAtFixedRate(() -> {
+                try {
+                    rpc.Discord_RunCallbacks();
+                } catch (Exception e) {
+                    errorLogger.accept("Error in Discord RPC callbacks: " + e.getMessage());
+                }
+            }, 0, 2, TimeUnit.SECONDS);
             
         } catch (Exception e) {
             errorLogger.accept("Failed to connect to Discord: " + e.getMessage());
