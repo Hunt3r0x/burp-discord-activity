@@ -157,6 +157,16 @@ The extension sends the following information to Discord (via local IPC):
 - **No External APIs**: The extension does not make any HTTP requests to external web services or APIs
 - **No Cloud Services**: All processing and communication happens locally on your machine
 
+### Offline Working Limitations
+
+**Note**: This extension requires the Discord desktop application to be installed and running on your machine. While the extension uses local IPC (no internet connection required for the extension itself), it does require:
+
+- Discord desktop app to be installed (Discord web browser version will not work)
+- Discord desktop app to be running while using the extension
+- The extension will not function in completely offline environments where Discord desktop app cannot run
+
+If you need to work in a completely offline environment without Discord, this extension will not be suitable for your use case.
+
 ## Privacy / Data Handling
 
 ### Data Collection
