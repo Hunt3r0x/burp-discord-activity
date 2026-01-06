@@ -92,9 +92,9 @@ public class BurpDiscordActivity implements BurpExtension, HttpHandler {
             
             String status = isActive ? "Proxy" : "Idle";
             
-            // Always show the last target we've seen, even when idle
-            String targetToShow = hasSeenTarget ? lastHost : "None";
-            discordRPC.updatePresence(status, targetToShow, projectName, sessionStartTime);
+            // Show target domain only if configured to do so
+            String targetDisplay = ExtensionConfig.SHOW_TARGET_DOMAIN && hasSeenTarget ? lastHost : "";
+            discordRPC.updatePresence(status, targetDisplay, projectName, sessionStartTime);
         } catch (Exception e) {
             api.logging().logToError("Error updating Discord presence: " + e.getMessage());
             e.printStackTrace();
